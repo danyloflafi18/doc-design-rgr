@@ -1,4 +1,4 @@
-package com.rgr.project.entity;
+package com.rgr.project.RGR_doc_design.entity;
 
 import javax.persistence.*;
 
