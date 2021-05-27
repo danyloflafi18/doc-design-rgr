@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available bouquets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <form method="get" action="getBouquetBasedEvent">
+                <h1>Choose an event</h1>
+                <select name="event" id="event">
+                {{#event}}
+                    <option value="{{bouquetEvent}}">{{bouquetEvent}}</option>
+                {{/event}}
+                </select><br>
+                <button onclick="hide()" class="search_btn" type="submit">Search</button>
+            </form>
+            <table align="center" width="100%" height="100px">
+                <tr>
+                    <th>ID</th>
+                    <th>Bouquet name</th>
+                    <th>Price</th>
+                    <th>Event</th>
+                </tr>
+                {{#customBouquetBasedFilter}}
+                <tr>
+                    <td>{{bouquetId}}</td>
+                    <td>{{bouquetName}}</td>
+                    <td>{{price}}</td>
+                    <td>{{bouquetEvent}}</td>
+                </tr>
+            {{/customBouquetBasedFilter}}
+            </table>
+        </div>
+        <div class="right_side">
+            <h1>Make order</h1>
+            <form class="order_form" method="post" action="addOrderBouquet">
+                <input style="margin-top: 40px" type="number" id="bouquet" name="bouquet" placeholder="Bouquet ID"/><br>
+                <input type="text" id="phone" name="phone" placeholder="Confirm your phone number"/>
+                <h2>Choose delivery type: </h2>
+                <select name="delivery" id="delivery" class="order_select">
+                {{#delivery}}
+                    <option value="{{deliveryId}}">Type: {{deliveryType}} \ Price: {{deliveryPrice}}</option>
+                {{/delivery}}
+                </select>
+                <h2>Choose packing type</h2>
+                <select name="packing" id="packing" class="order_select">
+                {{#packing}}
+                    <option value="{{packingId}}">Type: {{packingType}} \ Price: {{packingPrice}}</option>
+                {{/packing}}
+                </select><br>
+                <button class="submit_btn" type="choose">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <span>Розрахуново-графічна робота, НУЛП</span>
+    </footer>
+</body>
+</html>
