@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+<div class="sign_up_div">
+    <h1>Please sign up</h1>
+    <form class="sign_up_form" method="post" action="/register/profile">
+        <input type="text" name="customerName" placeholder="Name" />
+        <input type="text" name="customerPhone" placeholder="Phone" />
+        <input type="email" name="customerEmail" placeholder="Email" />
+        <input type="password" name="customerPassword" placeholder="Password" />
+        <button class="sign_up_btn" type="submit">Sign up</button>
+    </form>
+    <h2 class="log_in_link" onclick="showLogInForm()">Log in</h2>
+</div>
+<div class="log_in_div hide">
+    <h1>Please log in</h1>
+    <form class="log_in_form" method="post" action="/profile">
+        <input type="email" name="customerEmail" placeholder="Email" />
+        <input type="password" name="customerPassword" placeholder="Password" />
+        <button class="log_in_btn" type="submit">Log in</button>
+    </form>
+    <h2 class="sign_up_link" onclick="showSignUpForm()">Sign up</h2>
+</div>
+
+<script>
+    function showLogInForm() {
+        var logInForm = document.getElementsByClassName('log_in_div')[0];
+        var signUpForm = document.getElementsByClassName('sign_up_div')[0];
+        signUpForm.classList.add('hide');
+        logInForm.classList.remove('hide');
+    }
+    function showSignUpForm() {
+        var logInForm = document.getElementsByClassName('log_in_div')[0];
+        var signUpForm = document.getElementsByClassName('sign_up_div')[0];
+        signUpForm.classList.remove('hide');
+        logInForm.classList.add('hide');
+    }
+</script>
+</body>
+</html>

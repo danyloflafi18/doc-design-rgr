@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+<div class="container">{{#profileBlock}}
+<div class="profile_info">
+    <h1 style="text-align: center; font-size: 42px; color: rgb(0, 86, 37); margin-top: 20px; margin-bottom: 35px">{{customerName}}</h1>
+    <h2 style="text-align: center; font-size: 24px;">📞 {{customerPhone}}</h2>
+    <h2 style="text-align: center; font-size: 24px;">✉️ {{customerEmail}}</h2>
+</div>{{/profileBlock}}
+    {{#message}}
+        <div class="order_state">
+            <h1 style="text-align: center; font-size: 24px; color: rgb(0, 86, 37)">Your order №{{orderId}} is completed!</h1>
+        </div>
+    {{/message}}
+    <div class="order_history">
+        <h1 style="text-align: center; font-size: 42px; color: rgb(0, 86, 37)">Order history</h1>
+        <div class="table_wrapper">
+            <table align="center" width="100%" height="100px">
+                <tr>
+                    <th>Order</th>
+                    <th>Custom</th>
+                    <th>Bouquet</th>
+                    <th>Delivery</th>
+                    <th>Price</th>
+                    <th>Packing type</th>
+                    <th>Date</th>
+                </tr>
+                {{#orders}}
+                    <tr>
+                        <td>{{orderId}}</td>
+                        <td>{{customBouquet}}</td>
+                        <td>{{bouquetName}}</td>
+                        <td>{{deliveryType}}</td>
+                        <td>{{cost}}</td>
+                        <td>{{packingType}}</td>
+                        <td>{{orderDate}}</td>
+                    </tr>
+                {{/orders}}
+            </table>
+        </div>
+    </div>
+    <div class="make_order">
+        <h1 style="text-align: center; font-size: 42px; color: rgb(0, 86, 37)">Make Order</h1>
+        <div class="btn">
+            <form class="form" method="get" action="/chooseCatalog">
+                <button class="choose_btn">Choose from catalog</button>
+            </form>
+            <form class="form" method="get" action="/createCustom">
+                <button class="create_btn">Create own bouquet</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <span>Розрахуново-графічна робота, НУЛП</span>
+    </footer>
+</div>
+</body>
+</html>
