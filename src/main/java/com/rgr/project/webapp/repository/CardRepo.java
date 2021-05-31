@@ -5,9 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 public interface CardRepo extends JpaRepository<CardEntity, Long> {
-    @Query("select cd from CardEntity cd where cd.cardId =?1")
+    @Query(value = "select * from rgr_flower_system.card cd where cd.card_id =?1", nativeQuery = true)
     CardEntity getAllById(int id);
 
-    @Query("select cd from CardEntity  cd where cd.cardId =?1")
+    @Query(value = "select * from rgr_flower_system.card cd where cd.card_id =?1", nativeQuery = true)
     CardEntity getById(int id);
 }
