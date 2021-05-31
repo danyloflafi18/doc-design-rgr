@@ -2,14 +2,15 @@
 <html>
 <head>
     <title>Available bouquets</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
     html {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background-color: rgba(99, 166, 255, 0.52);
+        background-color: white;
     }
 
     body {
@@ -18,7 +19,7 @@
         box-sizing: border-box;
         position: relative;
         min-height: 850px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
     }
 
     .container {
@@ -41,7 +42,7 @@
         padding-bottom: 20px;
         position: relative;
         width: 45%;
-        border: 2px solid green;
+        border: 2px solid blueviolet;
         border-radius: 20px;
     }
 
@@ -71,11 +72,11 @@
     h1 {
         text-align: center;
         margin-top: 0;
-        color: rgb(0, 86, 37);
+        color: rgba(6, 6, 102, 0.89);
     }
 
     h2 {
-        color: rgb(0, 86, 37);
+        color: rgba(6, 6, 102, 0.89);
     }
 
     .search_btn, .submit_btn {
@@ -86,9 +87,9 @@
         height: 60px;
         font-size: 24px;
         border-radius: 20px;
-        background-color: rgba(99, 166, 255, 0.52);
-        color: rgb(0, 86, 37);
-        border: 2px solid green;
+        background-color: whitesmoke;
+        color: rgba(6, 6, 102, 0.89);
+        border: 2px solid rgba(104,165,255,0.98);;
         cursor: pointer;
         outline: none;
     }
@@ -123,18 +124,23 @@
         width: 50%;
     }
     footer {
-        height: 40px;
-        background-color: #a69695;
-        padding-top: 25px;
-        width: 80%;
-        margin: 0 auto;
+        height: 70px;
+        background-color: white;
+        padding-top: 60px;
+        margin-top: 60px;
     }
+    hr {
+        border: none;
+        background-color: blueviolet;
+        color: blueviolet;
+        height: 2px;
+     }
     span {
         display: block;
         margin: 0 auto;
         font-size: 18px;
         text-align: center;
-        color: #dbdad9;
+        color: rgba(6, 6, 102, 0.89);;
     }
 </style>
 <body>
@@ -188,7 +194,8 @@
         </div>
     </div>
     <footer>
-        <span>Розрахуново-графічна робота, НУЛП</span>
+        <hr>
+        <span>Software-Design documentation RGR</span>
     </footer>
 </body>
 </html>
