@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="RGR_doc_design" target="1.8" />
+      <module name="RGR_doc_design" target="7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
